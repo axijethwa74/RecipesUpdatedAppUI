@@ -2,13 +2,16 @@
 import 'package:dashboard/contants.dart';
 import 'package:dashboard/data.dart';
 import 'package:dashboard/shared.dart';
+import 'package:dashboard/video_info.dart';
 import 'package:flutter/material.dart';
 
 class Details extends StatelessWidget {
 
   final Recipe recipe;
 
-  const Details({super.key, required this.recipe});
+  const Details({Key? key, required this.recipe}) : super(key: key);
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -151,7 +154,10 @@ class Details extends StatelessWidget {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton.extended(
         onPressed: (){
-          
+           Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context)=> const VideoInfo(),
+      ));
         },
         backgroundColor: KPrimaryColor,
         icon: const Icon(Icons.play_circle_fill,

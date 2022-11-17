@@ -2,6 +2,8 @@ import 'package:dashboard/MainDrawer.dart';
 import 'package:dashboard/contants.dart';
 import 'package:dashboard/data.dart';
 import 'package:dashboard/details.dart';
+// ignore: unused_import
+import 'package:dashboard/frontpage.dart';
 import 'package:dashboard/shared.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +41,7 @@ class _ExplorerState extends State<Explorer> {
       ),
  
    drawer: const MainDrawer(),
-      body:  SingleChildScrollView(
+        body:  SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: Column(
           // ignore: prefer_const_literals_to_create_immutables
@@ -49,14 +51,15 @@ class _ExplorerState extends State<Explorer> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  buildTextTitleVariation1("Springy Slads"),
+                  buildTextTitleVariation1("Springy Foodies"),
                   buildTextSubTitleVariation1("Healthy & nutritious Food Recipes"),
                   
                   const SizedBox(
-                    height: 32,
+                    height: 30,
                   ),
 
                   Row(
+                    
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       option('vegetable', 'assets/icons/salad.png',0),
@@ -71,11 +74,15 @@ class _ExplorerState extends State<Explorer> {
                 ],
 
               ),
-              
+  
                ),
-               const SizedBox(
-                height: 24,
-               ),
+
+                // ignore: sized_box_for_whitespace
+                Container(
+                  height: 280,
+                  width: 350,
+                  child: const Frontpage(),
+                 ),
 
               // ignore: sized_box_for_whitespace
               Container(
@@ -84,13 +91,13 @@ class _ExplorerState extends State<Explorer> {
                   physics: const BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   children: buildRecipes(),
-
                 ),
               ),
 
-               const SizedBox(
-                height: 16,
-               ),
+              
+                  
+                   const SizedBox(
+                     height: 16),
 
                 Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -132,7 +139,7 @@ class _ExplorerState extends State<Explorer> {
         });
       },
       child: Container(
-        height: 40,
+        height: 35,
         decoration:  BoxDecoration(
           color: optionselected[index] ? KPrimaryColor : Colors.white,
           borderRadius: const BorderRadius.all(
@@ -146,7 +153,7 @@ class _ExplorerState extends State<Explorer> {
     
             SizedBox(
               height: 32,
-              width: 32,
+              width: 28,
               child: Image.asset(
                 image,
                 color: optionselected[index] ? Colors.white : Colors.black,
@@ -300,9 +307,11 @@ class _ExplorerState extends State<Explorer> {
               children: [
                 buildCalories("${recipe.calories}Kcal"),
 
-                const Icon(
+                IconButton(onPressed: (){
+                     
+                }, icon: const Icon(
                   Icons.favorite_border,
-                ),
+                ),)
                    ],
             ),
 

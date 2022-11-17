@@ -30,6 +30,22 @@ buildTextTitleVariation2(String text, bool opacity){
   );
 }
 
+buildTextTitleVariation3(String text){
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 8),
+    child: Text(
+      text,
+      style: GoogleFonts.breeSerif(
+        fontSize: 30,
+        fontWeight: FontWeight.w900,
+        color: Colors.black,
+      ),
+    ),
+  );
+}
+
+
+
 buildTextSubTitleVariation1(String text){
   return Padding(
     padding: const EdgeInsets.only(bottom: 8),
@@ -58,6 +74,7 @@ buildTextSubTitleVariation2(String text){
   );
 }
 
+
 buildRecipeTitle(String text){
   return Padding(
     padding: const EdgeInsets.only(bottom: 8),
@@ -84,7 +101,35 @@ buildRecipeSubTitle(String text){
     ),
   );
 }
+buildRecipeTitle3(String text){
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 8),
+    child: Text(
+      text,
+      overflow: TextOverflow.ellipsis,
+      style: const TextStyle(
+        fontSize: 32,
+        fontWeight: FontWeight.bold,
+      
+      ),
+     
+    ),
+  );
+}
 
+buildRecipeTitle4(String text){
+  return Padding(
+    padding: const EdgeInsets.only(bottom: 8),
+    child: Text(
+      text,
+      overflow: TextOverflow.ellipsis,
+      style: const TextStyle(
+        fontSize: 32,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
+  );
+}
 buildCalories(String text){
   return Text(
     text,

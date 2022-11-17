@@ -5,7 +5,9 @@ import 'package:introduction_screen/introduction_screen.dart';
 import 'explorer.dart';
 
 class Screen extends StatelessWidget {
-  const Screen({super.key});
+  const Screen({Key? key}) : super(key: key);
+
+  
 
   @override
   Widget build(BuildContext context) => SafeArea(
@@ -18,14 +20,14 @@ class Screen extends StatelessWidget {
         pages: [
        PageViewModel(     
            title: "Welcome ",
-           body: "To Recipes .. ", 
+           body: "To Recipes ", 
            image: Center(child: buildImage("images/coo.png"),),
            decoration: const PageDecoration(
            bodyFlex: 3,
            imageFlex: 6,
-          titlePadding: EdgeInsets.fromLTRB(100.0, 0.0, 0.0, 10.0),
-           titleTextStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 50,fontWeight: FontWeight.w700,fontFamily: 'Raleway-Bold'),
-           bodyTextStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 50.0,fontFamily: "Raleway-Bold"),
+           titlePadding: EdgeInsets.fromLTRB(100.0, 0.0, 0.0, 10.0),
+           titleTextStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 45,fontWeight: FontWeight.w700,fontFamily: 'Raleway-Bold'),
+           bodyTextStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 45,fontFamily: "Raleway-Bold"),
             ),
     ),
     
@@ -38,7 +40,7 @@ class Screen extends StatelessWidget {
            imageFlex: 6,
            titlePadding: EdgeInsets.fromLTRB(0.0, 0.0, 80.0, 10.0),
            bodyPadding: EdgeInsets.fromLTRB(50.0, 15.0, 0.0, 10.0),
-           titleTextStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 45,fontWeight: FontWeight.w700),
+           titleTextStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 40,fontWeight: FontWeight.w700),
            bodyTextStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 30.0,),
             ),
     ),
@@ -51,10 +53,10 @@ class Screen extends StatelessWidget {
            decoration: const PageDecoration(
            bodyFlex: 3,
            imageFlex: 6,
-           titlePadding: EdgeInsets.fromLTRB(0.0, 0.0, 50.0, 10.0),
-           bodyPadding: EdgeInsets.fromLTRB(50.0, 5.0, 0.0, 10.0),
-           titleTextStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 55,fontWeight: FontWeight.w700,fontFamily: 'RobotoCondensed-Italic'),
-           bodyTextStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 50.0,fontFamily: "Raleway-Regular"),
+           titlePadding: EdgeInsets.fromLTRB(0.0, 0.0, 45.0, 10.0),
+           
+           titleTextStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0), fontSize: 45,fontWeight: FontWeight.w700,fontFamily: 'RobotoCondensed-Italic'),
+           bodyTextStyle: TextStyle(fontWeight: FontWeight.w700, fontSize: 45.0,fontFamily: "Raleway-Regular"),
             
           ),
     ),
